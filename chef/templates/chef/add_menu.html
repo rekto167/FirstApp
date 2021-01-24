@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Tambah Menu</h1>
+  <form action="" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="{{form.food_name.id_for_label}}">Nama Menu :</label>
+        <input type="text" class="form-control" name="{{form.food_name.name}}" maxlength="{{form.food_name.max}}" required id="{{form.food_name.id_for_label}}">    
+      </div>
+
+    <div class="form-group">
+        <label for="{{form.food_pic.id_for_label}}">Gambar Menu : </label>
+        <input type="file" name="myfile">
+    </div>
+
+    <div class="form-group">
+        <label for="{{form.food_cat.id_for_label}}">Kategori Menu :</label>
+        <input type="text" class="form-control" name="{{form.food_cat.name}}" maxlength="{{form.food_cat.max}}" required id="{{form.food_cat.id_for_label}}">    
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Tambah</button>
+  </form>
+{% endblock content %}

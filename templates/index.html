@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block add_css %}
+    <link rel="stylesheet" href="{% static "style/style.css" %}">
+{% endblock add_css %}
+
+{% block judul %}
+  {{judul}}
+{% endblock judul %}
+
+{% block content %}
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <span>Anda Sebagai ?</span>
+    </div>
+
+    <!-- Login Form -->
+    <form>
+      <a class="btn btn-primary" href="{% url 'chef:index' %}">Chef</a>
+      <a class="btn btn-primary" href="">Customer</a>
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="https://www.youtube.com/renaltutor">Created by Renal Eki Riyanto</a>
+    </div>
+
+  </div>
+</div>
+{% endblock content %}
